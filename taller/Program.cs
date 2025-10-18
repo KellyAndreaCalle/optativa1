@@ -100,7 +100,7 @@
             {
                 Console.WriteLine($"Ocurrio un error inesperado: {ex.Message}");
             }
-            // Pausa para que el usuario pueda ver el resultado antes de volver al menu.
+            // pausa para que el usuario pueda ver el resultado antes de volver al menu.
             Console.WriteLine("\nPresione cualquier tecla para continuar...");
             Console.ReadKey();
         }
@@ -210,13 +210,10 @@
         int dividendo = int.Parse(Console.ReadLine());
         Console.Write("Ingrese el divisor: ");
         int divisor = int.Parse(Console.ReadLine());
-
-        // CONCEPTO: Excepciones personalizadas
         if (divisor == 0)
         {
              Console.WriteLine("Error: No se puede dividir entre 0.");
         } else {
-             // CONCEPTO: Operador de modulo (%)
              int residuo = dividendo % divisor;
              Console.WriteLine($"Resultado: {residuo}");
         }
@@ -226,10 +223,9 @@
     {
         Console.WriteLine("\n--- 8. Sum of Evens ---");
         int suma = 0;
-        // CONCEPTO: Bucle 'for'
         for (int i = 1; i <= 50; i++)
         {
-            if (i % 2 == 0) // Si el numero es par
+            if (i % 2 == 0) // Si es par
             {
                 suma += i; // Lo añade a la suma
             }
@@ -293,10 +289,9 @@
     {
         Console.WriteLine("\n--- 13. Vowel Counter ---");
         Console.Write("Ingrese una palabra: ");
-        string palabra = Console.ReadLine().ToLower(); // Convertimos a minusculas para simplificar
+        string palabra = Console.ReadLine().ToLower(); // se convertimos a minusculas 
         char[] vocales = { 'a', 'e', 'i', 'o', 'u' };
         int contador = 0;
-        // CONCEPTO: Bucle 'foreach' para iterar sobre la palabra
         foreach (char letra in palabra)
         {
             if (vocales.Contains(letra))
